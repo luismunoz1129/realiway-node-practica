@@ -18,7 +18,7 @@ const options = {
 }
 
 app.use(express.json());
-app.use(cors(options))
+app.use(cors())
 
 app.get('/',(req,res)=>{
     res.send('<h1> pagina inicio </h1>');
