@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const app = express ();
 const port = process.env.PORT || 3977;
-const whitLists = ['https://realiway-node.up.railway.app/'];
+const whitLists = ['https://realiway-node.up.railway.app','http://127.0.0.1:5501'];
 const options = {
   origin:(origin,callback)=>{
     if(whitLists.includes(origin)){
@@ -18,7 +18,7 @@ const options = {
 }
 
 app.use(express.json());
-app.use(cors())
+app.use(cors(options))
 
 app.get('/',(req,res)=>{
     res.send('<h1> pagina inicio </h1>');
