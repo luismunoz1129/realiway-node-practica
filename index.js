@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const app = express ();
 const port = process.env.PORT || 3977;
-const whitLists = [];
+const whitLists = ['https://realiway-node.up.railway.app/'];
 const options = {
   origin:(origin,callback)=>{
     if(whitLists.includes(origin)){
