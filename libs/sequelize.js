@@ -5,7 +5,8 @@ const setupModels = require('./../db/models/index')
 const USER = encodeURIComponent(config.dbUser);
 const PASSWORD = encodeURIComponent(config.dbPassword);
 
-const URI = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
+const URI1 = `postgres://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${config.dbName}`;
+const URI = "postgresql://postgres:w3DT0BnI45TzdDpb4lgS@containers-us-west-5.railway.app:7309/railway";
 
 const sequelize = new Sequelize(URI, {
   dialect:"postgres",
