@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  postgres_luis:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=mi_base
+      - POSTGRES_USER=luis
+      - POSTGRES_PASSWORD=luisger123
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  pgadmin_luis:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=luis@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - 80:80
